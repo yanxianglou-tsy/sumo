@@ -1,0 +1,27 @@
+syntax = "proto3";
+package sumo_protocol;
+
+service AgentRpc {
+  rpc StartService(AgentStartServiceRequest) returns (StartServiceResponse);
+  rpc StopService(StopServiceRequest) returns (StopServiceResponse);
+  rpc Login(LoginRequest) returns (stream ServiceUpdateWrapper);
+}
+
+service SupervisorRpc {
+  rpc StartService(SupervisorStartServiceRequest)
+      returns (StartServiceResponse);
+  rpc StopService(StopServiceRequest) returns (StopServiceResponse);
+}
+
+message AgentStartServiceRequest { string service_definition_json = 1; }
+
+message StartServiceResponse {}
+
+message SupervisorStartServiceRequest { string service_name = 1; }
+message StopServiceRequest { string service_name = 1; }
+
+message StopServiceResponse {}
+
+message LoginRequest { string username = 1; }
+
+message ServiceUpdateWrapper { string service_update_json = 1; }

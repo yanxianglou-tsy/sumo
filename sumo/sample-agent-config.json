@@ -1,0 +1,6 @@
+{
+    "base_directory": "/home/louyx/app/sumo/agent/",
+    "rpc_server_address": "0.0.0.0:9999",
+    "log_level": "INFO",
+    "running_services_polling_interval_in_seconds": 1
+}
