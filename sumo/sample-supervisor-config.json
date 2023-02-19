@@ -1,15 +1,15 @@
 {
-    "base_directory": "home/louyx/app/sumo/supervisor/",
+    "base_directory": "/home/ylou/app/sumo/supervisor/",
     "service_definitions": {
         "mock-service-1": {
             "name": "mock-service-1",
             "runs_on": "127.0.0.1:9999",
-            "executable": "/home/louyx/app/mock-service-1/mock-service-1.sh",
+            "executable": "/home/ylou/app/mock-service-1/mock-service-1.sh",
             "args": [],
             "envs": {},
-            "working_directory": "/home/louyx/app/mock-service-1/",
-            "redirect_stdout_to": "/home/louyx/app/mock-service-1/logs/stdout",
-            "redirect_stderr_to": "/home/louyx/app/mock-service-1/logs/stderr",
+            "working_directory": "/home/ylou/app/mock-service-1/",
+            "redirect_stdout_to": "/home/ylou/app/mock-service-1/logs/stdout",
+            "redirect_stderr_to": "/home/ylou/app/mock-service-1/logs/stderr",
             "cpu_affinity": []
         }
     },
